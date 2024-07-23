@@ -4,7 +4,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C:\\Users\\gabri\\IdeaProjects\\egsys-automation\\src\\test\\java\\resources\\features",
+        features = "src\\test\\java\\resources\\features",
         glue = {"stepdefinitions"},
         plugin = {"pretty", "html:target/cucumber-reports"}
 )

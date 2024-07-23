@@ -14,7 +14,7 @@ public class StepDefinitions {
 
     @Given("que eu acesso o {string}")
     public void queEuAcessoO(String site) {
-        System.setProperty("webdriver.chrome.driver", "C://Users//gabri//IdeaProjects//egsys-automation//src//main//resources//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(site);
     }
