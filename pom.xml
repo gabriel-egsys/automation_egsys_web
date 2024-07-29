@@ -22,6 +22,12 @@
             <version>3.141.59</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-java</artifactId>
+            <version>3.0.0</version> <!-- Verifique a versão mais recente -->
+        </dependency>
+
         <!-- Cucumber dependency for Java -->
         <dependency>
             <groupId>io.cucumber</groupId>
