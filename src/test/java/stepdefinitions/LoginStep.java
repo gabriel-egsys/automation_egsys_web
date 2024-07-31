@@ -35,10 +35,10 @@ public class LoginStep {
         basePage.preencherCampo("", LoginPage.DIGITO_FIELD);
     }
 
-    // @When("eu clico em {string}")
-    // public void euClicoEm(String botao) {
-    //     basePage.clicarBotaoPorNome("id", botao);
-    // }
+    @When("eu clico em entrar")
+    public void euClicoEm() {
+        basePage.clicarBotao(false, "entrar");
+    }
 
     @Then("o login deve ser realizado")
     public void validaLogin() {

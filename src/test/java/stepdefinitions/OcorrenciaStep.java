@@ -1,17 +1,13 @@
 package stepdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import io.cucumber.messages.types.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import PageElements.Elements;
 import PageElements.MapeElements;
 import pages.BasePage;
 import pages.OcorrenciaPage;
@@ -58,7 +54,14 @@ public class OcorrenciaStep {
     }
 
     @Then("deve ser exibido {string}")
-    public void deve_ser_exibido(String texto){
+    public void deve_ser_exibido(String texto) {
         basePage.validarTexto(texto);
+    }
+
+    @After
+    public void finalizar() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

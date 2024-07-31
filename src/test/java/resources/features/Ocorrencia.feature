@@ -5,8 +5,8 @@ Feature: Ocorrencia
 
   Scenario: Gerar nova ocorrência
     When eu clico no menu 'GERAR_OCORRENCIA_LINK'
-    And eu preencho o campo "CAMPO_NOME" com "AutomaçãoQA"
-    And eu preencho o campo "CAMPO_TELEFONE" com "51999999999"
+    And eu preencho o campo "CAMPO_NOME" com "Automação Quality Assurance"
+    And eu preencho o campo "CAMPO_TELEFONE" com "51995486235"
     And eu seleciono "Curitiba" no campo "CAMPO_MUNICIPIO"
     And eu seleciono "Centro" no campo "CAMPO_BAIRRO"
     And eu seleciono "AVENIDA BRASILIA" no campo "CAMPO_ENDERECO"
