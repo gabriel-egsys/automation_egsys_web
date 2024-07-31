@@ -20,6 +20,10 @@ public class Elements {
     public static final By CAMPO_DESCRICAO = By.id("DESCRICAO");
     public static final By CAMPO_ENDERECO = By.id("pesquisa_endereco");
     public static final By CAMPO_NATUREZA = By.id("CLASSIFICACAO_ATENDIMENTO");
+    public static final By CAMPO_NUMERO_ENDERECO = By.id("NUMERO");
     public static final By AUTOR_NAO_ESTA_NO_LOCAL = By.id("RESPOSTA_NIVEL_CRIME_0_0");
     public static final By AUTOR_NAO_ESTA_ARMADO = By.id("RESPOSTA_NIVEL_CRIME_1_0");
+    public static final By NAO_RISCO_DE_TUMULTO = By.id("RESPOSTA_NIVEL_CRIME_2_0");
+    public static final By NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE = By.id("RESPOSTA_NIVEL_CRIME_3_1");
+    public static final By BOTAO_SALVAR = By.id("salvar_button");
 }

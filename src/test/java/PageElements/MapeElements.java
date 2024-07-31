@@ -17,15 +17,21 @@ public class MapeElements {
         SELETORES.put("MODAL_HEADER_TEXT", Elements.MODAL_HEADER_TEXT);
 
         // Mapeamento elementos OcorrenciaPage
+        SELETORES.put("GERAR_OCORRENCIA_LINK", Elements.GERAR_OCORRENCIA_LINK);
         SELETORES.put("CAMPO_NOME", Elements.CAMPO_NOME);
         SELETORES.put("CAMPO_TELEFONE", Elements.CAMPO_TELEFONE);
         SELETORES.put("CAMPO_MUNICIPIO", Elements.CAMPO_MUNICIPIO);
         SELETORES.put("CAMPO_BAIRRO", Elements.CAMPO_BAIRRO);
         SELETORES.put("CAMPO_DESCRICAO", Elements.CAMPO_DESCRICAO);
         SELETORES.put("CAMPO_ENDERECO", Elements.CAMPO_ENDERECO);
+        SELETORES.put("CAMPO_NUMERO_ENDERECO", Elements.CAMPO_NUMERO_ENDERECO);
         SELETORES.put("CAMPO_NATUREZA", Elements.CAMPO_NATUREZA);
         SELETORES.put("AUTOR_NAO_ESTA_NO_LOCAL", Elements.AUTOR_NAO_ESTA_NO_LOCAL);
         SELETORES.put("AUTOR_NAO_ESTA_ARMADO", Elements.AUTOR_NAO_ESTA_ARMADO);
+        SELETORES.put("NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE", Elements.NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE);
+        SELETORES.put("NAO_RISCO_DE_TUMULTO", Elements.NAO_RISCO_DE_TUMULTO);
+        SELETORES.put("BOTAO_SALVAR", Elements.BOTAO_SALVAR);
+
     }
 
     public static By getSeletorPorNome(String nome) {
