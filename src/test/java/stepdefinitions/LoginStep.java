@@ -6,6 +6,7 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import PageElements.MapeElements;
 import pages.BasePage;
 import pages.LoginPage;
 
@@ -37,7 +38,7 @@ public class LoginStep {
 
     @When("eu clico em entrar")
     public void euClicoEm() {
-        basePage.clicarBotao(false, "entrar");
+        basePage.clicarBotao(true, MapeElements.getSeletorPorNome("LOGIN_BUTTON"));
     }
 
     @Then("o login deve ser realizado")

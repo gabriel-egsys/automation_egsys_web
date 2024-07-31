@@ -2,6 +2,8 @@ package pages;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +17,6 @@ public class BasePage {
 
     WebDriver driver;
 
-    // Construtor para inicializar o WebDriver
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -55,15 +56,23 @@ public class BasePage {
         }
     }
 
-    public void clicarBotao(Boolean isFrame, String botaoId) {
-        if (isFrame == false) {
-            clicarBotao(isFrame, MapeElements.getSeletorPorNome(botaoId));
-        } else {
-            driver.switchTo().frame("iframeContainer");
-            clicarBotao(isFrame, MapeElements.getSeletorPorNome(botaoId));
-            driver.switchTo().defaultContent();
+    public void clicarBotao(String botaoId) {
+        try {
+            WebElement elemento = driver.findElement(MapeElements.getSeletorPorNome(botaoId));
+            elemento.click();
+        } catch (NoSuchElementException e) {
+            try {
+                driver.switchTo().frame("iframeContainer");
+                WebElement elementoNoFrame = driver.findElement(MapeElements.getSeletorPorNome(botaoId));
+                elementoNoFrame.click();
+                driver.switchTo().defaultContent();
+            } catch (NoSuchElementException ex) {
+                driver.switchTo().defaultContent();
+                throw new NoSuchElementException("Elemento não encontrado dentro ou fora do frame: " + botaoId);
+            }
         }
     }
+    
 
     public boolean validarTexto(String textoEsperado) {
         String pageSource = driver.getPageSource();

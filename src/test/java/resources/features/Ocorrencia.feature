@@ -1,7 +1,11 @@
 Feature: Ocorrencia
 
   Background: Realizar login no SADE
-    Given que eu realizo login no sade
+    Given que eu acesso o BackOffice
+    And eu preencho os campos corretamente
+    When eu clico em entrar
+    And eu clico em "SELECIONAR_BUTTON"
+    Then o login deve ser realizado
 
   Scenario: Gerar nova ocorrência
     When eu clico no menu 'GERAR_OCORRENCIA_LINK'

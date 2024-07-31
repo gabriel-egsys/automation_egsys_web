@@ -18,17 +18,14 @@ public class OcorrenciaPage {
     }
 
     public void preencherOcorrencia(String elemento, String texto) {
-        // Alterna para o iframe correto
         driver.switchTo().frame("iframeContainer");
 
-        // Espera explícita para garantir que o elemento esteja visível
         WebDriverWait wait = new WebDriverWait(driver, 10);
         By campo = MapeElements.getSeletorPorNome(elemento);
 
         if (campo != null) {
             WebElement campoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(campo));
-            // Preencher o campo após garantir que o elemento está visível
-            campoElemento.clear(); // Limpa o campo antes de preencher
+            campoElemento.clear(); 
             campoElemento.sendKeys(texto);
         } else {
             throw new IllegalArgumentException("Nome do campo não encontrado: " + elemento);
@@ -40,11 +37,9 @@ public class OcorrenciaPage {
     public void selecionarMunicipio(String municipio) {
         driver.switchTo().frame("iframeContainer");
 
-        // Localiza o campo de município e preenche com o valor desejado
         WebElement campoMunicipio = driver.findElement(MapeElements.getSeletorPorNome("CAMPO_MUNICIPIO"));
         campoMunicipio.sendKeys(municipio);
 
-        // Aguarda a opção aparecer na lista (se necessário) e a seleciona
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("//datalist[@id='municipio_endereco_list']//option[text()='" + municipio + "']"), municipio));
 

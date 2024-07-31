@@ -49,8 +49,8 @@ public class OcorrenciaStep {
     }
 
     @When("eu clico em {string}")
-    public void eu_clico_no(String botao) {
-        basePage.clicarBotao(false, botao);
+    public void eu_clico_em(String botao) {
+        basePage.clicarBotao(botao);
     }
 
     @Then("deve ser exibido {string}")
