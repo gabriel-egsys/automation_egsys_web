@@ -1,13 +1,20 @@
 package stepdefinitions;
 
-// import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+import io.cucumber.messages.types.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import PageElements.Elements;
+import PageElements.MapeElements;
 import pages.BasePage;
 import pages.OcorrenciaPage;
-import PageElements.Elements;
 
 public class OcorrenciaStep {
 
@@ -29,9 +36,10 @@ public class OcorrenciaStep {
         basePage.realizarLogin();
     }
 
-    @When("eu clico no menu 'Gerar Ocorrência'")
-    public void acessaMenuGerarOcorrencia() {
-        basePage.clicarBotao(Elements.GERAR_OCORRENCIA_LINK);
+    @When("eu clico no menu {string}")
+    public void acessaMenuGerarOcorrencia(String selector) {
+        WebElement elemento = driver.findElement(MapeElements.getSeletorPorNome(selector));
+        elemento.click();
     }
 
     @When("eu preencho o campo {string} com {string}")
@@ -42,5 +50,15 @@ public class OcorrenciaStep {
     @When("eu seleciono {string} no campo {string}")
     public void selecionaMunicipio(String texto, String municipio) {
         basePage.selecionarOpcaoDatalist(municipio, texto);
+    }
+
+    @When("eu clico em {string}")
+    public void eu_clico_no(String botao) {
+        basePage.clicarBotao(false, botao);
+    }
+
+    @Then("deve ser exibido {string}")
+    public void deve_ser_exibido(String texto){
+        basePage.validarTexto(texto);
     }
 }

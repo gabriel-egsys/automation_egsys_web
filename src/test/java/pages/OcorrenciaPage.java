@@ -38,7 +38,6 @@ public class OcorrenciaPage {
     }
 
     public void selecionarMunicipio(String municipio) {
-        // Alterna para o iframe correto
         driver.switchTo().frame("iframeContainer");
 
         // Localiza o campo de município e preenche com o valor desejado

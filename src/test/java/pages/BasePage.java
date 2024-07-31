@@ -25,11 +25,11 @@ public class BasePage {
         preencherCampo("administrador_sistema_demonstracao", MapeElements.getSeletorPorNome("RG_FIELD"));
         preencherCampo("sade*103020", MapeElements.getSeletorPorNome("PASSWORD_FIELD"));
         preencherCampo("", MapeElements.getSeletorPorNome("DIGITO_FIELD"));
-        clicarBotao(MapeElements.getSeletorPorNome("LOGIN_BUTTON"));
+        clicarBotao(true, MapeElements.getSeletorPorNome("LOGIN_BUTTON"));
         boolean urlCorreta = validarUrlAtual(
                 "https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/usuarioAcesso");
         assertTrue("A URL esperada não foi encontrada.", urlCorreta);
-        clicarBotao(MapeElements.getSeletorPorNome("SELECIONAR_BUTTON"));
+        clicarBotao(true, MapeElements.getSeletorPorNome("SELECIONAR_BUTTON"));
         boolean urlHome = validarUrlAtual("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/home");
         assertTrue("A URL esperada não foi encontrada.", urlHome);
     }
@@ -43,18 +43,33 @@ public class BasePage {
         campoElemento.sendKeys(texto);
     }
 
-    public void clicarBotao(By botao) {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement button = wait.until(ExpectedConditions.elementToBeClickable(botao));
-        button.click();
-    }
-    
-    public boolean validarTexto(By seletor, String textoEsperado) {
-        WebElement elemento = driver.findElement(seletor);
-        String textoAtual = elemento.getText();
-        return textoAtual.equals(textoEsperado);
+    public void clicarBotao(Boolean isTelaLogin, By botaoLocator) {
+        if (isTelaLogin) {
+            WebElement elemento = driver.findElement(botaoLocator);
+            elemento.click();
+        } else {
+            driver.switchTo().frame("iframeContainer");
+            WebElement elemento = driver.findElement(botaoLocator);
+            elemento.click();
+            driver.switchTo().defaultContent();
+        }
     }
 
+    public void clicarBotao(Boolean isFrame, String botaoId) {
+        if (isFrame == false) {
+            clicarBotao(isFrame, MapeElements.getSeletorPorNome(botaoId));
+        } else {
+            driver.switchTo().frame("iframeContainer");
+            clicarBotao(isFrame, MapeElements.getSeletorPorNome(botaoId));
+            driver.switchTo().defaultContent();
+        }
+    }
+
+    public boolean validarTexto(String textoEsperado) {
+        String pageSource = driver.getPageSource();
+        return pageSource.contains(textoEsperado);
+    }
+    
     public boolean validarUrlAtual(String urlEsperada) {
         String urlAtual = driver.getCurrentUrl();
         return urlAtual.equals(urlEsperada);
@@ -65,17 +80,43 @@ public class BasePage {
         WebElement inputElemento = driver.findElement(MapeElements.getSeletorPorNome(inputId));
         inputElemento.clear();
         inputElemento.sendKeys(textoOpcao);
-        inputElemento.sendKeys(Keys.ARROW_DOWN);
         aguarde(1000);
+        inputElemento.sendKeys(Keys.ARROW_DOWN);
         inputElemento.sendKeys(Keys.ENTER);
         aguarde(1000);
-
         driver.switchTo().defaultContent();
     }
 
-    public void aguarde(int tempo){
+    public void clicarBotaoPorNome(String tipoSeletor, String seletor) {
+        By by;
+
+        switch (tipoSeletor) {
+            case "id":
+                by = By.id(seletor);
+                break;
+            case "css":
+                by = By.cssSelector(seletor);
+                break;
+            case "class":
+                by = By.className(seletor);
+                break;
+            case "xpath":
+                by = By.xpath(seletor);
+                break;
+            default:
+                throw new IllegalArgumentException("Tipo de seletor não suportado: " + tipoSeletor);
+        }
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(by));
+
+        driver.switchTo().frame("iframeContainer");
+        element.click();
+    }
+
+    public void aguarde(int tempo) {
         try {
-            Thread.sleep(tempo); 
+            Thread.sleep(tempo);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
