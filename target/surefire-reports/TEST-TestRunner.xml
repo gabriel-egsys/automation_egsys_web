@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestRunner" time="4.391" tests="1" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestRunner" time="25.273" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\gabri\AppData\Local\Temp\surefire14311567196972774969\surefirebooter-20240731161125609_3.jar C:\Users\gabri\AppData\Local\Temp\surefire14311567196972774969 2024-07-31T16-11-25_505-jvmRun1 surefire-20240731161125609_1tmp surefire_0-20240731161125609_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gabri\AppData\Local\Temp\surefire18367934864725583258\surefirebooter-20240806113910787_3.jar C:\Users\gabri\AppData\Local\Temp\surefire18367934864725583258 2024-08-06T11-39-10_702-jvmRun1 surefire-20240806113910787_1tmp surefire_0-20240806113910787_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gabri\OneDrive\Desktop\Documentos\egsys\automation_selenium\automation_egsys_web\target\test-classes;C:\Users\gabri\OneDrive\Desktop\Documentos\egsys\automation_selenium\automation_egsys_web\target\classes;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\gabri\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\gabri\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\gabri\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\gabri\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\gabri\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\gabri\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\gabri\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\gabri\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\gabri\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\gabri\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\gabri\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\gabri\.m2\repository\io\github\cdimascio\dotenv-java\3.0.0\dotenv-java-3.0.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-java\7.18.1\cucumber-java-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-core\7.18.1\cucumber-core-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-gherkin\7.18.1\cucumber-gherkin-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.18.1\cucumber-gherkin-messages-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\gherkin\28.0.0\gherkin-28.0.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\messages\24.1.0\messages-24.1.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\testng-xml-formatter\0.2.0\testng-xml-formatter-0.2.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\query\12.2.0\query-12.2.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\tag-expressions\6.1.0\tag-expressions-6.1.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-expressions\17.1.0\cucumber-expressions-17.1.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\datatable\7.18.1\datatable-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-plugin\7.18.1\cucumber-plugin-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\docstring\7.18.1\docstring-7.18.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\html-formatter\21.4.1\html-formatter-21.4.1.jar;C:\Users\gabri\.m2\repository\io\cucumber\junit-xml-formatter\0.5.0\junit-xml-formatter-0.5.0.jar;C:\Users\gabri\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\gabri\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\gabri\.m2\repository\io\cucumber\cucumber-junit\7.18.1\cucumber-junit-7.18.1.jar;C:\Users\gabri\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\gabri\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gabri\AppData\Local\Temp\surefire14311567196972774969\surefirebooter-20240731161125609_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gabri\AppData\Local\Temp\surefire18367934864725583258\surefirebooter-20240806113910787_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -58,17 +58,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="Gerar nova ocorrência" classname="Ocorrencia" time="4.006">
-    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Selecionar&quot;}&#10;  (Session info: chrome=127.0.6533.73)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;GABRIEL&apos;, ip: &apos;192.168.25.29&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 79f7764f74e9a9dca8b84f8febbd28fa&#10;*** Element info: {Using=id, value=Selecionar}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#Selecionar"}
-  (Session info: chrome=127.0.6533.73)
+  <testcase name="Gerar nova ocorrência" classname="Ocorrencia" time="24.794">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#RESPOSTA_NIVEL_CRIME_0_0&quot;}&#10;  (Session info: chrome=127.0.6533.89)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;GABRIEL&apos;, ip: &apos;192.168.25.29&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5ed01301130dc9b300ed43ac13b48f5f&#10;*** Element info: {Using=id, value=RESPOSTA_NIVEL_CRIME_0_0}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#RESPOSTA_NIVEL_CRIME_0_0"}
+  (Session info: chrome=127.0.6533.89)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'GABRIEL', ip: '192.168.25.29', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
-*** Element info: {Using=id, value=Selecionar}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ed01301130dc9b300ed43ac13b48f5f
+*** Element info: {Using=id, value=RESPOSTA_NIVEL_CRIME_0_0}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -82,25 +82,38 @@ Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.BasePage.clicarBotao(BasePage.java:61)
-	at stepdefinitions.OcorrenciaStep.eu_clico_em(OcorrenciaStep.java:53)
-	at ✽.eu clico em "SELECIONAR_BUTTON"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:7)
+	at pages.BasePage.clicarElemento(BasePage.java:32)
+	at stepdefinitions.OcorrenciaStep.clicoEm(OcorrenciaStep.java:41)
+	at ✽.eu clico em "AUTOR_NAO_ESTA_NO_LOCAL"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:21)
 ]]></error>
     <system-out><![CDATA[
-Scenario: Gerar nova ocorrência                                                     &amp#27;[90m# src/test/java/resources/features/Ocorrencia.feature:10&amp#27;[0m
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mque eu acesso o BackOffice&amp#27;[0m                                                  &amp#27;[90m# stepdefinitions.LoginStep.queEuAcesso()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho os campos corretamente&amp#27;[0m                                            &amp#27;[90m# stepdefinitions.LoginStep.euPreenchoOsCamposCorretamente()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32meu clico em entrar&amp#27;[0m                                                           &amp#27;[90m# stepdefinitions.LoginStep.euClicoEm()&amp#27;[0m
-  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31meu clico em &amp#27;[0m&amp#27;[31m&amp#27;[1m"SELECIONAR_BUTTON"&amp#27;[0m                                               &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Selecionar"}
-  (Session info: chrome=127.0.6533.73)
+Scenario: Gerar nova ocorrência                                                     &amp#27;[90m# src/test/java/resources/features/Ocorrencia.feature:11&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mque eu acesso o BackOffice&amp#27;[0m                                                  &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcesso()&amp#27;[0m
+Iframe com nome 'iframeContainer' não encontrado.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"RG_FIELD"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"administrador_sistema_demonstracao"&amp#27;[0m       &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+Iframe com nome 'iframeContainer' não encontrado.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"PASSWORD_FIELD"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"sade*103020"&amp#27;[0m                        &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu clico em &amp#27;[0m&amp#27;[32m&amp#27;[1m"LOGIN_BUTTON"&amp#27;[0m                                                    &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu clico em &amp#27;[0m&amp#27;[32m&amp#27;[1m"SELECIONAR_BUTTON"&amp#27;[0m                                               &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu clico em &amp#27;[0m&amp#27;[32m&amp#27;[1m'GERAR_OCORRENCIA_LINK'&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_NOME"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"Automação Quality Assurance"&amp#27;[0m            &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_TELEFONE"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"51995486235"&amp#27;[0m                        &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu seleciono &amp#27;[0m&amp#27;[32m&amp#27;[1m"Curitiba"&amp#27;[0m&amp#27;[32m no campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_MUNICIPIO"&amp#27;[0m                            &amp#27;[90m# stepdefinitions.OcorrenciaStep.euSelecionoNoCampo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu seleciono &amp#27;[0m&amp#27;[32m&amp#27;[1m"Centro"&amp#27;[0m&amp#27;[32m no campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_BAIRRO"&amp#27;[0m                                 &amp#27;[90m# stepdefinitions.OcorrenciaStep.euSelecionoNoCampo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu seleciono &amp#27;[0m&amp#27;[32m&amp#27;[1m"AVENIDA BRASILIA"&amp#27;[0m&amp#27;[32m no campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_ENDERECO"&amp#27;[0m                     &amp#27;[90m# stepdefinitions.OcorrenciaStep.euSelecionoNoCampo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_NUMERO_ENDERECO"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"221"&amp#27;[0m                         &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu preencho o campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_DESCRICAO"&amp#27;[0m&amp#27;[32m com &amp#27;[0m&amp#27;[32m&amp#27;[1m"Ocorrência Gerada Pela Automação."&amp#27;[0m &amp#27;[90m# stepdefinitions.OcorrenciaStep.queEuAcessoPreencho(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32meu seleciono &amp#27;[0m&amp#27;[32m&amp#27;[1m"ROUBO"&amp#27;[0m&amp#27;[32m no campo &amp#27;[0m&amp#27;[32m&amp#27;[1m"CAMPO_NATUREZA"&amp#27;[0m                                &amp#27;[90m# stepdefinitions.OcorrenciaStep.euSelecionoNoCampo(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[31mAnd &amp#27;[0m&amp#27;[31meu clico em &amp#27;[0m&amp#27;[31m&amp#27;[1m"AUTOR_NAO_ESTA_NO_LOCAL"&amp#27;[0m                                         &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+      &amp#27;[31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#RESPOSTA_NIVEL_CRIME_0_0"}
+  (Session info: chrome=127.0.6533.89)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'GABRIEL', ip: '192.168.25.29', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
-*** Element info: {Using=id, value=Selecionar}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ed01301130dc9b300ed43ac13b48f5f
+*** Element info: {Using=id, value=RESPOSTA_NIVEL_CRIME_0_0}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -114,40 +127,29 @@ Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.BasePage.clicarBotao(BasePage.java:61)
-	at stepdefinitions.OcorrenciaStep.eu_clico_em(OcorrenciaStep.java:53)
-	at ✽.eu clico em "SELECIONAR_BUTTON"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:7)
+	at pages.BasePage.clicarElemento(BasePage.java:32)
+	at stepdefinitions.OcorrenciaStep.clicoEm(OcorrenciaStep.java:41)
+	at ✽.eu clico em "AUTOR_NAO_ESTA_NO_LOCAL"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:21)
 &amp#27;[0m
-  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mo login deve ser realizado&amp#27;[0m                                                   &amp#27;[90m# stepdefinitions.LoginStep.validaLogin()&amp#27;[0m
-  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36meu clico no menu &amp#27;[0m&amp#27;[36m&amp#27;[1m'GERAR_OCORRENCIA_LINK'&amp#27;[0m                                     &amp#27;[90m# stepdefinitions.OcorrenciaStep.acessaMenuGerarOcorrencia(java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu preencho o campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_NOME"&amp#27;[0m&amp#27;[36m com &amp#27;[0m&amp#27;[36m&amp#27;[1m"Automação Quality Assurance"&amp#27;[0m            &amp#27;[90m# stepdefinitions.OcorrenciaStep.preencheDadosOcorrencia(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu preencho o campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_TELEFONE"&amp#27;[0m&amp#27;[36m com &amp#27;[0m&amp#27;[36m&amp#27;[1m"51995486235"&amp#27;[0m                        &amp#27;[90m# stepdefinitions.OcorrenciaStep.preencheDadosOcorrencia(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu seleciono &amp#27;[0m&amp#27;[36m&amp#27;[1m"Curitiba"&amp#27;[0m&amp#27;[36m no campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_MUNICIPIO"&amp#27;[0m                            &amp#27;[90m# stepdefinitions.OcorrenciaStep.selecionaMunicipio(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu seleciono &amp#27;[0m&amp#27;[36m&amp#27;[1m"Centro"&amp#27;[0m&amp#27;[36m no campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_BAIRRO"&amp#27;[0m                                 &amp#27;[90m# stepdefinitions.OcorrenciaStep.selecionaMunicipio(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu seleciono &amp#27;[0m&amp#27;[36m&amp#27;[1m"AVENIDA BRASILIA"&amp#27;[0m&amp#27;[36m no campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_ENDERECO"&amp#27;[0m                     &amp#27;[90m# stepdefinitions.OcorrenciaStep.selecionaMunicipio(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu preencho o campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_NUMERO_ENDERECO"&amp#27;[0m&amp#27;[36m com &amp#27;[0m&amp#27;[36m&amp#27;[1m"221"&amp#27;[0m                         &amp#27;[90m# stepdefinitions.OcorrenciaStep.preencheDadosOcorrencia(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu preencho o campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_DESCRICAO"&amp#27;[0m&amp#27;[36m com &amp#27;[0m&amp#27;[36m&amp#27;[1m"Ocorrência Gerada Pela Automação."&amp#27;[0m &amp#27;[90m# stepdefinitions.OcorrenciaStep.preencheDadosOcorrencia(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu seleciono &amp#27;[0m&amp#27;[36m&amp#27;[1m"ROUBO"&amp#27;[0m&amp#27;[36m no campo &amp#27;[0m&amp#27;[36m&amp#27;[1m"CAMPO_NATUREZA"&amp#27;[0m                                &amp#27;[90m# stepdefinitions.OcorrenciaStep.selecionaMunicipio(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"AUTOR_NAO_ESTA_NO_LOCAL"&amp#27;[0m                                         &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"AUTOR_NAO_ESTA_ARMADO"&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"NAO_RISCO_DE_TUMULTO"&amp#27;[0m                                            &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE"&amp#27;[0m                              &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"BOTAO_SALVAR"&amp#27;[0m                                                   &amp#27;[90m# stepdefinitions.OcorrenciaStep.eu_clico_em(java.lang.String)&amp#27;[0m
-  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mdeve ser exibido &amp#27;[0m&amp#27;[36m&amp#27;[1m"Ocorrência registrada"&amp#27;[0m                                     &amp#27;[90m# stepdefinitions.OcorrenciaStep.deve_ser_exibido(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"AUTOR_NAO_ESTA_ARMADO"&amp#27;[0m                                           &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"NAO_RISCO_DE_TUMULTO"&amp#27;[0m                                            &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE"&amp#27;[0m                              &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[36mWhen &amp#27;[0m&amp#27;[36meu clico em &amp#27;[0m&amp#27;[36m&amp#27;[1m"BOTAO_SALVAR"&amp#27;[0m                                                   &amp#27;[90m# stepdefinitions.OcorrenciaStep.clicoEm(java.lang.String)&amp#27;[0m
+  &amp#27;[36mThen &amp#27;[0m&amp#27;[36mdeve ser exibido "Ocorrência registrada"&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 36018
+    <system-err><![CDATA[Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 38619
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1722453087.156][WARNING]: This version of ChromeDriver has not been tested with Chrome version 127.
-jul. 31, 2024 4:11:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1722955152.490][WARNING]: This version of ChromeDriver has not been tested with Chrome version 127.
+ago. 06, 2024 11:39:12 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 6935
+Starting ChromeDriver 126.0.6478.182 (5b5d8292ddf182f8b2096fa665b473b6317906d5-refs/branch-heads/6478@{#1776}) on port 9076
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1722453087.765][WARNING]: This version of ChromeDriver has not been tested with Chrome version 127.
-jul. 31, 2024 4:11:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1722955153.100][WARNING]: This version of ChromeDriver has not been tested with Chrome version 127.
+ago. 06, 2024 11:39:13 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>

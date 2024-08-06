@@ -1,15 +1,13 @@
 package pages;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 
 import PageElements.MapeElements;
 
@@ -21,113 +19,99 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void realizarLogin() {
-        acessarPagina("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/login");
-        preencherCampo("administrador_sistema_demonstracao", MapeElements.getSeletorPorNome("RG_FIELD"));
-        preencherCampo("sade*103020", MapeElements.getSeletorPorNome("PASSWORD_FIELD"));
-        preencherCampo("", MapeElements.getSeletorPorNome("DIGITO_FIELD"));
-        clicarBotao(true, MapeElements.getSeletorPorNome("LOGIN_BUTTON"));
-        boolean urlCorreta = validarUrlAtual(
-                "https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/usuarioAcesso");
-        assertTrue("A URL esperada não foi encontrada.", urlCorreta);
-        clicarBotao(true, MapeElements.getSeletorPorNome("SELECIONAR_BUTTON"));
-        boolean urlHome = validarUrlAtual("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/home");
-        assertTrue("A URL esperada não foi encontrada.", urlHome);
-    }
-
     public void acessarPagina(String url) {
         driver.get(url);
     }
 
-    public void preencherCampo(String texto, By campo) {
-        WebElement campoElemento = driver.findElement(campo);
-        campoElemento.sendKeys(texto);
-    }
-
-    public void clicarBotao(Boolean isTelaLogin, By botaoLocator) {
-        if (isTelaLogin) {
-            WebElement elemento = driver.findElement(botaoLocator);
+    public void clicarElemento(String nomeElemento) {
+        By seletor = MapeElements.getSeletorPorNome(nomeElemento);
+        if (seletor == null) {
+            throw new IllegalArgumentException("Elemento com nome '" + nomeElemento + "' não encontrado.");
+        }
+        try {
+            WebElement elemento = driver.findElement(seletor);
             elemento.click();
-        } else {
-            driver.switchTo().frame("iframeContainer");
-            WebElement elemento = driver.findElement(botaoLocator);
-            elemento.click();
+        } catch (NoSuchElementException e) {
+            driver.switchTo().frame("iFrameContainer");
+            WebElement elementoDentroIframe = driver.findElement(seletor);
+            elementoDentroIframe.click();
             driver.switchTo().defaultContent();
         }
     }
 
-    public void clicarBotao(String botaoId) {
+    public void preencherCampo(String nomeCampo, String texto) {
+        By seletor = MapeElements.getSeletorPorNome(nomeCampo);
+        if (seletor == null) {
+            throw new IllegalArgumentException("Campo com nome '" + nomeCampo + "' não encontrado.");
+        }
         try {
-            WebElement elemento = driver.findElement(MapeElements.getSeletorPorNome(botaoId));
-            elemento.click();
-        } catch (NoSuchElementException e) {
+            switchToIframeIfPresent("iframeContainer");
+            Thread.sleep(1000); 
+            WebElement campoDentroIframe = driver.findElement(seletor);
+            campoDentroIframe.clear();
+            campoDentroIframe.sendKeys(texto);
+            driver.switchTo().defaultContent(); 
+        } catch (NoSuchFrameException | NoSuchElementException | InterruptedException e) {
             try {
-                driver.switchTo().frame("iframeContainer");
-                WebElement elementoNoFrame = driver.findElement(MapeElements.getSeletorPorNome(botaoId));
-                elementoNoFrame.click();
-                driver.switchTo().defaultContent();
-            } catch (NoSuchElementException ex) {
-                driver.switchTo().defaultContent();
-                throw new NoSuchElementException("Elemento não encontrado dentro ou fora do frame: " + botaoId);
+                Thread.sleep(1000); 
+                WebElement campo = driver.findElement(seletor);
+                campo.clear();
+                campo.sendKeys(texto);
+            } catch (NoSuchElementException | InterruptedException ex) {
+                throw new RuntimeException("Elemento não encontrado: " + ex.getMessage());
             }
         }
     }
     
 
-    public boolean validarTexto(String textoEsperado) {
-        String pageSource = driver.getPageSource();
-        return pageSource.contains(textoEsperado);
-    }
-    
-    public boolean validarUrlAtual(String urlEsperada) {
-        String urlAtual = driver.getCurrentUrl();
-        return urlAtual.equals(urlEsperada);
+    private void switchToIframeIfPresent(String iframeName) {
+        try {
+            driver.switchTo().frame(iframeName);
+        } catch (NoSuchFrameException e) {
+            System.out.println("Iframe com nome '" + iframeName + "' não encontrado.");
+        }
     }
 
-    public void selecionarOpcaoDatalist(String inputId, String textoOpcao) {
+    public void preencheCampo(String nomeCampo, String texto){
+        By seletor = MapeElements.getSeletorPorNome(nomeCampo);
+
         driver.switchTo().frame("iframeContainer");
-        WebElement inputElemento = driver.findElement(MapeElements.getSeletorPorNome(inputId));
-        inputElemento.clear();
-        inputElemento.sendKeys(textoOpcao);
-        aguarde(1000);
-        inputElemento.sendKeys(Keys.ARROW_DOWN);
-        inputElemento.sendKeys(Keys.ENTER);
-        aguarde(1000);
+        WebElement campoDentroIframe = driver.findElement(seletor);
+        campoDentroIframe.clear();
+        campoDentroIframe.sendKeys(texto);
         driver.switchTo().defaultContent();
     }
 
-    public void clicarBotaoPorNome(String tipoSeletor, String seletor) {
-        By by;
-
-        switch (tipoSeletor) {
-            case "id":
-                by = By.id(seletor);
-                break;
-            case "css":
-                by = By.cssSelector(seletor);
-                break;
-            case "class":
-                by = By.className(seletor);
-                break;
-            case "xpath":
-                by = By.xpath(seletor);
-                break;
-            default:
-                throw new IllegalArgumentException("Tipo de seletor não suportado: " + tipoSeletor);
+    public void selecionarOpcao(String nomeCampo, String texto) {
+        By seletor = MapeElements.getSeletorPorNome(nomeCampo);
+        if (seletor == null) {
+            throw new IllegalArgumentException("Campo select com nome '" + nomeCampo + "' não encontrado.");
         }
-
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(by));
-
-        driver.switchTo().frame("iframeContainer");
-        element.click();
-    }
-
-    public void aguarde(int tempo) {
+    
         try {
-            Thread.sleep(tempo);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            realizarSelecao(nomeCampo, texto);
+        } catch (NoSuchElementException e) {
+            driver.switchTo().frame("iFrameContainer");
+            try {
+                realizarSelecao(nomeCampo, texto);
+            } finally {
+                driver.switchTo().defaultContent();
+            }
         }
     }
+    
+    private void realizarSelecao(String nomeCampo, String texto) {
+        try {
+            preencheCampo(nomeCampo, texto);
+            Thread.sleep(1300); 
+            Actions actions = new Actions(driver);
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+            actions.sendKeys(Keys.ENTER).perform();
+            Thread.sleep(1300); 
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+            throw new RuntimeException("Thread interrompida", ex);
+        }
+    }
+ 
 }

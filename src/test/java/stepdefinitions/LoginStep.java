@@ -24,29 +24,6 @@ public class LoginStep {
         basePage = new BasePage(driver);
     }
 
-    @Given("que eu acesso o BackOffice")
-    public void queEuAcesso() {
-        basePage.acessarPagina("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/login");
-    }
-
-    @When("eu preencho os campos corretamente")
-    public void euPreenchoOsCamposCorretamente() {
-        basePage.preencherCampo("administrador_sistema_demonstracao", LoginPage.RG_FIELD);
-        basePage.preencherCampo("sade*103020", LoginPage.PASSWORD_FIELD);
-        basePage.preencherCampo("", LoginPage.DIGITO_FIELD);
-    }
-
-    @When("eu clico em entrar")
-    public void euClicoEm() {
-        basePage.clicarBotao(true, MapeElements.getSeletorPorNome("LOGIN_BUTTON"));
-    }
-
-    @Then("o login deve ser realizado")
-    public void validaLogin() {
-        boolean urlCorreta = basePage
-                .validarUrlAtual("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/usuarioAcesso");
-        assertTrue("A URL esperada não foi encontrada.", urlCorreta);
-    }
 
     @After
     public void finalizar() {

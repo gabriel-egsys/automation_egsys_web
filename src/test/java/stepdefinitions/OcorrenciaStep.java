@@ -1,9 +1,9 @@
 package stepdefinitions;
 
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,42 +26,30 @@ public class OcorrenciaStep {
         ocorrenciaPage = new OcorrenciaPage(driver);
     }
 
-    @Given("que eu realizo login no sade")
+    @Given("que eu acesso o BackOffice")
     public void queEuAcesso() {
         basePage.acessarPagina("https://treinamento.harpya.pm.pr.gov.br/pmpr/syspm-web/public/login");
-        basePage.realizarLogin();
-    }
-
-    @When("eu clico no menu {string}")
-    public void acessaMenuGerarOcorrencia(String selector) {
-        WebElement elemento = driver.findElement(MapeElements.getSeletorPorNome(selector));
-        elemento.click();
     }
 
     @When("eu preencho o campo {string} com {string}")
-    public void preencheDadosOcorrencia(String elemento, String texto) {
-        ocorrenciaPage.preencherOcorrencia(elemento, texto);
-    }
-
-    @When("eu seleciono {string} no campo {string}")
-    public void selecionaMunicipio(String texto, String municipio) {
-        basePage.selecionarOpcaoDatalist(municipio, texto);
+    public void queEuAcessoPreencho(String seletor, String texto) {
+        basePage.preencherCampo(seletor, texto);
     }
 
     @When("eu clico em {string}")
-    public void eu_clico_em(String botao) {
-        basePage.clicarBotao(botao);
+    public void clicoEm(String texto) {
+        basePage.clicarElemento(texto);
     }
 
-    @Then("deve ser exibido {string}")
-    public void deve_ser_exibido(String texto) {
-        basePage.validarTexto(texto);
+    @When("eu seleciono {string} no campo {string}")
+    public void euSelecionoNoCampo(String seletor, String texto) {
+        basePage.selecionarOpcao(texto, seletor);
     }
 
-    @After
-    public void finalizar() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+    // @After
+    // public void finalizar() {
+    //     if (driver != null) {
+    //         driver.quit();
+    //     }
+    // }
 }

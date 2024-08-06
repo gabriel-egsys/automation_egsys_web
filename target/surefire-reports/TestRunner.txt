@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.391 s <<< FAILURE! -- in TestRunner
-Ocorrencia.Gerar nova ocorrência -- Time elapsed: 4.006 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 25.27 s <<< FAILURE! -- in TestRunner
+Ocorrencia.Gerar nova ocorrência -- Time elapsed: 24.79 s <<< ERROR!
 org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#Selecionar"}
-  (Session info: chrome=127.0.6533.73)
+no such element: Unable to locate element: {"method":"css selector","selector":"#RESPOSTA_NIVEL_CRIME_0_0"}
+  (Session info: chrome=127.0.6533.89)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'GABRIEL', ip: '192.168.25.29', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.73, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
-*** Element info: {Using=id, value=Selecionar}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.89, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\gabri\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ed01301130dc9b300ed43ac13b48f5f
+*** Element info: {Using=id, value=RESPOSTA_NIVEL_CRIME_0_0}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -26,7 +26,7 @@ Session ID: 79f7764f74e9a9dca8b84f8febbd28fa
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.BasePage.clicarBotao(BasePage.java:61)
-	at stepdefinitions.OcorrenciaStep.eu_clico_em(OcorrenciaStep.java:53)
-	at ✽.eu clico em "SELECIONAR_BUTTON"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:7)
+	at pages.BasePage.clicarElemento(BasePage.java:32)
+	at stepdefinitions.OcorrenciaStep.clicoEm(OcorrenciaStep.java:41)
+	at ✽.eu clico em "AUTOR_NAO_ESTA_NO_LOCAL"(file:///C:/Users/gabri/OneDrive/Desktop/Documentos/egsys/automation_selenium/automation_egsys_web/src/test/java/resources/features/Ocorrencia.feature:21)
 
