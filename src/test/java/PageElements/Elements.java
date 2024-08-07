@@ -26,4 +26,5 @@ public class Elements {
     public static final By NAO_RISCO_DE_TUMULTO = By.id("RESPOSTA_NIVEL_CRIME_2_0");
     public static final By NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE = By.id("RESPOSTA_NIVEL_CRIME_3_1");
     public static final By BOTAO_SALVAR = By.id("salvar_button");
+    public static final By MODAL = By.id("popup_container");
 }
