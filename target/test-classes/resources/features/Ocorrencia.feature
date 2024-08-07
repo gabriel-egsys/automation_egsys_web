@@ -7,7 +7,6 @@ Feature: Ocorrencia
     And eu clico em "LOGIN_BUTTON"
     And eu clico em "SELECIONAR_BUTTON"
 
-
   Scenario: Gerar nova ocorrência
     And eu clico em 'GERAR_OCORRENCIA_LINK'
     And eu preencho o campo "CAMPO_NOME" com "Automação Quality Assurance"
@@ -23,4 +22,3 @@ Feature: Ocorrencia
     And eu clico em "NAO_RISCO_DE_TUMULTO"
     And eu clico em "NAO_PESSOAS_FERIDAS_RISCO_DE_MORTE"
     When eu clico em "BOTAO_SALVAR"
-    Then deve ser exibido "Ocorrência registrada"

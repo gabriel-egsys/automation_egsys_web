@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 
@@ -10,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import PageElements.MapeElements;
 import pages.BasePage;
+import pages.BasePage.ElementoNaoClicavelException;
 import pages.OcorrenciaPage;
 
 public class OcorrenciaStep {
@@ -40,16 +42,21 @@ public class OcorrenciaStep {
     public void clicoEm(String texto) {
         basePage.clicarElemento(texto);
     }
-
+    
     @When("eu seleciono {string} no campo {string}")
     public void euSelecionoNoCampo(String seletor, String texto) {
         basePage.selecionarOpcao(texto, seletor);
     }
 
-    // @After
-    // public void finalizar() {
-    //     if (driver != null) {
-    //         driver.quit();
-    //     }
-    // }
+    @Then("deve ser exibido {string}")
+    public void euSelecionoNoCampo(String texto) {
+        basePage.validaExibicao("MODAL", texto);
+    }
+
+    @After
+    public void finalizar() {
+    if (driver != null) {
+    driver.quit();
+    }
+    }
 }
